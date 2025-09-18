@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Potato Downloads — Store</title>
+
+<!-- Paste your Firebase config object here (replace placeholders) -->
+<script>
+  // Replace values with your Firebase project's config (Project settings -> SDK setup -> Config)
+  window.FIREBASE_CONFIG = {
+    apiKey: "YOUR_API_KEY",
+    authDomain: "YOUR_PROJECT.firebaseapp.com",
+    projectId: "YOUR_PROJECT_ID",
+    storageBucket: "YOUR_PROJECT.appspot.com",
+    messagingSenderId: "SENDER_ID",
+    appId: "APP_ID"
+  };
+</script>
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="steam-ui">
+  <header class="topbar">
+    <div class="left">
+      <button id="burger" class="burger" aria-label="Menu">☰</button>
+      <img src="logo.svg" class="logo" alt="Potato">
+      <div class="brand">Potato Downloads</div>
+    </div>
+
+    <div class="center">
+      <input id="search" class="search" placeholder="Search the store...">
+      <select id="categoryFilter" class="select"><option value="all">All categories</option></select>
+    </div>
+
+    <div class="right">
+      <button id="loginBtn" class="btn small">Log in</button>
+      <div id="userInfo" class="user-info"></div>
+    </div>
+  </header>
+
+  <nav id="sidebar" class="sidebar closed" aria-hidden="true">
+    <div class="sidebar-inner">
+      <button class="nav-btn" id="navStore">Store</button>
+      <button class="nav-btn" id="navUpload">Upload Center</button>
+      <button class="nav-btn" id="navProfile">Profile</button>
+      <hr>
+      <button id="exportBtn" class="ghost">Export JSON</button>
+      <button id="importBtn" class="ghost">Import JSON</button>
+      <input id="importFile" type="file" accept="application/json" style="display:none">
+      <hr>
+      <button id="themeToggle" class="ghost">Toggle Theme</button>
+    </div>
+  </nav>
+
+  <main id="main">
+    <section id="store" class="store container">
+      <div id="steamGrid" class="steam-grid"></div>
+    </section>
+  </main>
+
+  <!-- Login Modal -->
+  <div id="modalBackdrop" class="modal-backdrop hidden"></div>
+  <div id="loginModal" class="modal hidden" role="dialog" aria-modal="true">
+    <h3>Log in / Sign up</h3>
+    <form id="loginForm" class="form">
+      <label>Username (display name)<input id="displayName" required></label>
+      <label>Email <input id="email" type="email" required></label>
+      <label>Password <input id="password" type="password" required></label>
+      <div class="row">
+        <button id="doSignup" class="btn" type="button">Sign up</button>
+        <button id="doLogin" class="btn" type="button">Log in</button>
+        <button id="guestBtn" type="button" class="btn ghost">Continue as guest</button>
+      </div>
+    </form>
+    <button id="closeModal" class="close-x" aria-label="Close">✕</button>
+  </div>
+
+<script type="module" src="app.firebase-ui.js"></script>
+</body>
+</html>

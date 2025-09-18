@@ -1,0 +1,30 @@
+[
+  {
+    "id": "demo1",
+    "name": "Demo App",
+    "short": "A sample app",
+    "desc": "This demo app shows how things work.",
+    "category": "Utilities",
+    "icon": "",
+    "appFile": null,
+    "published": true,
+    "created": 0,
+    "updated": 0,
+    "uploader": "admin",
+    "reviews": []
+  },
+  {
+    "id": "game123",
+    "name": "Spud Runner",
+    "short": "Fast potato platformer",
+    "desc": "Run and collect spuds in this demo game.",
+    "category": "Games",
+    "icon": "",
+    "appFile": null,
+    "published": true,
+    "created": 0,
+    "updated": 0,
+    "uploader": "gamer7898178",
+    "reviews": []
+  }
+]

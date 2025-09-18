@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Upload Center — Potato Downloads</title><link rel="stylesheet" href="style.css"></head>
+<body class="steam-ui">
+  <header class="topbar">
+    <div class="left"><a href="index.html" class="back">← Store</a><img src="logo.svg" class="logo"><div class="brand">Upload Center</div></div>
+    <div class="right"><div id="userInfoUpload" class="user-info"></div></div>
+  </header>
+
+  <main class="container">
+    <div class="card upload-card">
+      <h2>Upload a new app</h2>
+      <form id="uploadForm">
+        <label>App name <input id="u_name" required></label>
+        <label>Short description <input id="u_short"></label>
+        <label>Category <input id="u_category" placeholder="Games, Tools, Media..."></label>
+        <label>Long description <textarea id="u_desc" rows="5"></textarea></label>
+        <label>Icon (png/jpg) <input id="u_icon" type="file" accept="image/*"></label>
+        <label>App file <input id="u_appfile" type="file" required></label>
+        <div class="row">
+          <button id="u_save" class="btn" type="button">Save Draft</button>
+          <button id="u_publish" class="btn" type="button">Publish</button>
+        </div>
+        <div class="muted small">Note: Published apps will be uploaded to Firebase Storage and visible to all visitors.</div>
+      </form>
+    </div>
+  </main>
+
+<script type="module" src="app.firebase-ui.js"></script>
+</body>
+</html>
